@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Events</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body style="background-color:rgb(159, 241, 175)">
+  <div class="container">
+    <div class="'row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyWnIx7-wUJd60xHaiMXamNvVkmbcrhfpHdw&usqp=CAU);">
+        <h1 style="color:rgb(217, 255, 0)"><strong> Belly Button Biodiversity Dashboard</strong></h1>
+        <p style="color:yellow"><strong>Use the interactive charts below to explore the dataset</strong></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body">
+            <h6>ID: 940</h6>
+            <h6>ETHNICITY: Caucasian</h6>
+            <h6>GENDER: F</h6><h6>AGE: 24</h6>
+            <h6>LOCATION: Beaufort/NC</h6>
+            <h6>BBTYPE: I</h6>
+            <h6>WFREQ: 2</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar_plot"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+</body>
+</html>
